@@ -15,9 +15,14 @@ public class Scene_Changer : MonoBehaviour
     {
         
     }
-    public void LoadMainScene()
+    public void LoadMainScene(string sceneName)
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ExitGame()
+    { 
+        Application.Quit();
     }
 
 }
