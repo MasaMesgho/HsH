@@ -1,11 +1,13 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Play_Button : MonoBehaviour
+public class Scene_Changer : MonoBehaviour
 {
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -13,4 +15,9 @@ public class Play_Button : MonoBehaviour
     {
         
     }
+    public void LoadMainScene()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
 }
