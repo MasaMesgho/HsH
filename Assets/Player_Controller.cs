@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityGLTF.Interactivity.Schema;
 
 public class Player_Controller : MonoBehaviour
@@ -27,6 +28,11 @@ public class Player_Controller : MonoBehaviour
         Velocity = (float)(Math.Abs(playerRigidbody.linearVelocity.z) + Math.Abs(playerRigidbody.linearVelocity.y));
         float currentMoveForce = moveForce;
         if (Velocity < 30) { currentMoveForce *= 2; }
+
+        if (transform.position.y < 0) 
+        {
+            Destroy(this.gameObject);
+        }
 
         if (Velocity < moveSpeedCap)
         {

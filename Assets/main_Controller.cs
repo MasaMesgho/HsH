@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class main_Controller : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class main_Controller : MonoBehaviour
     public GameObject Player;
     public GameObject ScoreBoard;
     public GameObject SpeedBoard;
+    public GameObject OverText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +21,11 @@ public class main_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Player == null)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+
         count++;
         if (count >= 15)
         {
