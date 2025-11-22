@@ -26,7 +26,9 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log(collision.gameObject.name);
-            Destroy(collision.gameObject); }
+            Destroy(collision.gameObject);
+            GameObject.Find("Game_Controller").GetComponent<main_Controller>().enemyKill();
+        }
 
         Destroy(this.gameObject);
 

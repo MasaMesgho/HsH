@@ -11,8 +11,9 @@ public class Player_Controller : MonoBehaviour
     public float baseMoveForce = 5f;
     private float moveForce;
     public float Velocity;
-    public float moveSpeedCap = 50f;
+    public float moveSpeedCap = 100f;
     public GameObject presentFrame;
+    private int count = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,9 +25,9 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Velocity = (float)Math.Sqrt((playerRigidbody.linearVelocity.x * playerRigidbody.linearVelocity.x) + (playerRigidbody.linearVelocity.y * playerRigidbody.linearVelocity.y) + (playerRigidbody.linearVelocity.z * playerRigidbody.linearVelocity.z));
+        Velocity = (float)(Math.Abs(playerRigidbody.linearVelocity.z) + Math.Abs(playerRigidbody.linearVelocity.y));
         float currentMoveForce = moveForce;
-        if (Velocity < 12) { currentMoveForce *= 2; }
+        if (Velocity < 30) { currentMoveForce *= 2; }
 
         if (Velocity < moveSpeedCap)
         {
