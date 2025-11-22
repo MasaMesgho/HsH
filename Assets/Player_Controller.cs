@@ -12,7 +12,7 @@ public class Player_Controller : MonoBehaviour
     private float moveForce;
     public float Velocity;
     public float moveSpeedCap = 50f;
-    public GameObject present;
+    public GameObject presentFrame;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,11 +61,10 @@ public class Player_Controller : MonoBehaviour
     void ThrowPresent()
     {
         Debug.Log("Present Thrown");
-        GameObject bullet = Instantiate(present, transform.position, Quaternion.identity);
-        Rigidbody rb = bullet.GetComponent<Rigidbody>(); 
-        rb.useGravity = true;
+        GameObject present = Instantiate(presentFrame, this.GetComponent<Camera>().transform.position, Quaternion.identity);
+        Rigidbody prb = present.GetComponent<Rigidbody>();
 
-        rb.AddForce(-gameObject.transform.up * 5f, ForceMode.Force);
+        prb.AddForce(Vector3.forward * 500f, ForceMode.Force);
 
 
     }

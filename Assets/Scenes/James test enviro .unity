@@ -322,11 +322,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51f45cf04a051d849a806bc2967da146, type: 3}
---- !u!1 &779153469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2053686658390058488, guid: 5d19c9c19523115409cb3588b03886cf, type: 3}
-  m_PrefabInstance: {fileID: 1856213116147828355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &850066218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8128668236925612103, guid: f6aa920a4ffcf454f9a998846919ab94, type: 3}
@@ -593,7 +588,7 @@ GameObject:
   - component: {fileID: 1641312000}
   - component: {fileID: 1641311999}
   - component: {fileID: 1641312002}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +750,7 @@ GameObject:
   - component: {fileID: 1720418744}
   - component: {fileID: 1720418743}
   - component: {fileID: 1720418745}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +789,7 @@ MonoBehaviour:
   baseMoveForce: 5
   Velocity: 0
   moveSpeedCap: 50
-  present: {fileID: 779153469}
+  presentFrame: {fileID: 2053686658390058488, guid: 5d19c9c19523115409cb3588b03886cf, type: 3}
 --- !u!54 &1720418744
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -985,6 +980,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 51f45cf04a051d849a806bc2967da146, type: 3}
       propertyPath: m_Name
       value: Candy Cane Textured
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 51f45cf04a051d849a806bc2967da146, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303862984709885087, guid: 51f45cf04a051d849a806bc2967da146, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1188,6 +1191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Present
       objectReference: {fileID: 0}
+    - target: {fileID: 7412656400773255614, guid: 5d19c9c19523115409cb3588b03886cf, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1252,6 +1259,10 @@ PrefabInstance:
     - target: {fileID: 9142512299325471809, guid: ceb9c886273661949b1d9fe40c7030eb, type: 3}
       propertyPath: m_Name
       value: sick OST
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142512299325471809, guid: ceb9c886273661949b1d9fe40c7030eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
