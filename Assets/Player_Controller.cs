@@ -8,7 +8,7 @@ public class Player_Controller : MonoBehaviour
 {
 
     private Rigidbody playerRigidbody;
-    private float moveForce = 5f;
+    public float moveForce = 5f;
     public float Velocity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,11 +20,29 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerRigidbody.AddRelativeForce(Vector3.forward * moveForce);
+        Velocity = (float)Math.Sqrt((playerRigidbody.linearVelocity.x * playerRigidbody.linearVelocity.x) + (playerRigidbody.linearVelocity.y * playerRigidbody.linearVelocity.y) + (playerRigidbody.linearVelocity.z * playerRigidbody.linearVelocity.z));
+        float currentMoveForce = moveForce;
+        if (Velocity < 12) { currentMoveForce *= 2; }
 
-        Velocity = ((playerRigidbody.linearVelocity.x * playerRigidbody.linearVelocity.x) + (playerRigidbody.linearVelocity.y * playerRigidbody.linearVelocity.y) + (playerRigidbody.linearVelocity.z * playerRigidbody.linearVelocity.z) );
+        playerRigidbody.AddRelativeForce(Vector3.forward * (Input.GetAxis("Vertical") * currentMoveForce));
+        playerRigidbody.AddRelativeForce(Vector3.right * (Input.GetAxis("Horizontal") * currentMoveForce));
+
+
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        moveForce = 5f;
+        playerRigidbody.linearDamping = 0.5f;
+    }
+    void OnCollisionExit()
+    {
+        moveForce = 2.5f;
+        playerRigidbody.linearDamping = 0.25f;
     }
 
     public float GetVelocity()
-    { return Velocity; }
+    { 
+        return Velocity; 
+    }
 }
