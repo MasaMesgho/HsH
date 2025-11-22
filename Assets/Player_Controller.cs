@@ -8,13 +8,15 @@ public class Player_Controller : MonoBehaviour
 {
 
     private Rigidbody playerRigidbody;
-    public float moveForce = 5f;
+    public float baseMoveForce = 5f;
+    private float moveForce;
     public float Velocity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
         Velocity = 0;
+        moveForce = baseMoveForce;
     }
 
     // Update is called once per frame
@@ -32,13 +34,13 @@ public class Player_Controller : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        moveForce = 5f;
+        moveForce = baseMoveForce;
         playerRigidbody.linearDamping = 0.5f;
     }
     void OnCollisionExit()
     {
-        moveForce = 2.5f;
-        playerRigidbody.linearDamping = 0.25f;
+        moveForce = baseMoveForce / 4;
+        playerRigidbody.linearDamping = 0f;
     }
 
     public float GetVelocity()
