@@ -11,6 +11,8 @@ public class Player_Controller : MonoBehaviour
     public float baseMoveForce = 5f;
     private float moveForce;
     public float Velocity;
+    public float moveSpeedCap = 50f;
+    public GameObject present;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,8 +28,16 @@ public class Player_Controller : MonoBehaviour
         float currentMoveForce = moveForce;
         if (Velocity < 12) { currentMoveForce *= 2; }
 
-        playerRigidbody.AddRelativeForce(Vector3.forward * (Input.GetAxis("Vertical") * currentMoveForce));
-        playerRigidbody.AddRelativeForce(Vector3.right * (Input.GetAxis("Horizontal") * currentMoveForce));
+        if (Velocity < moveSpeedCap)
+        {
+            playerRigidbody.AddRelativeForce(Vector3.forward * (Input.GetAxis("Vertical") * currentMoveForce));
+            playerRigidbody.AddRelativeForce(Vector3.right * (Input.GetAxis("Horizontal") * currentMoveForce));
+        }
+
+        if (Input.GetKeyDown("e"))
+        {
+            ThrowPresent();
+        }
 
 
     }
@@ -46,5 +56,17 @@ public class Player_Controller : MonoBehaviour
     public float GetVelocity()
     { 
         return Velocity; 
+    }
+
+    void ThrowPresent()
+    {
+        Debug.Log("Present Thrown");
+        GameObject bullet = Instantiate(present, transform.position, Quaternion.identity);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>(); 
+        rb.useGravity = true;
+
+        rb.AddForce(-gameObject.transform.up * 5f, ForceMode.Force);
+
+
     }
 }
