@@ -13,7 +13,6 @@ public class Player_Controller : MonoBehaviour
     public float Velocity;
     public float moveSpeedCap = 100f;
     public GameObject presentFrame;
-    private int count = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

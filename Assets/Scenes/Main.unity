@@ -333,7 +333,7 @@ MonoBehaviour:
   baseMoveForce: 20
   Velocity: 0
   moveSpeedCap: 100
-  presentFrame: {fileID: 0}
+  presentFrame: {fileID: 2053686658390058488, guid: 5d19c9c19523115409cb3588b03886cf, type: 3}
 --- !u!54 &651123235
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -361,6 +361,60 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!1 &795950298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 795950300}
+  - component: {fileID: 795950299}
+  m_Layer: 0
+  m_Name: Enemy Spawn 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &795950299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795950298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d573af49a7f3544a8c45b5524937470, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy1: {fileID: 5750021038015395204, guid: 7bd205710b17cf642a6fd48186fa620e, type: 3}
+  Enemy2: {fileID: -6689036041284674117, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
+  Enemy3: {fileID: 0}
+  EnemyList: []
+  MaxEnemyCount: 15
+  SpawnDelay: 10
+  MinX: 0
+  MinZ: 0
+  MaxX: 1000
+  MaxZ: 1000
+--- !u!4 &795950300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795950298}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 387.51, y: 5.54, z: 377.501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &823923209
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,3 +950,4 @@ SceneRoots:
   - {fileID: 651123233}
   - {fileID: 1288473957}
   - {fileID: 1851991407}
+  - {fileID: 795950300}

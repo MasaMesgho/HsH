@@ -38,7 +38,7 @@ public class main_Controller : MonoBehaviour
             final += "0";
         }
         final = "Score: "+final+temp;
-        ScoreBoard.GetComponent<TextMeshPro>().text = final;
+        ScoreBoard.GetComponent<TextMeshProUGUI>().text = final;
     }
 
     public void displaySpeed()
