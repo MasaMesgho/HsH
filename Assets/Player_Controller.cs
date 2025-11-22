@@ -11,6 +11,8 @@ public class Player_Controller : MonoBehaviour
     public float baseMoveForce = 5f;
     private float moveForce;
     public float Velocity;
+    public float moveSpeedCap = 50f;
+    public GameObject presentFrame;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,10 +28,11 @@ public class Player_Controller : MonoBehaviour
         float currentMoveForce = moveForce;
         if (Velocity < 12) { currentMoveForce *= 2; }
 
-        playerRigidbody.AddRelativeForce(Vector3.forward * (Input.GetAxis("Vertical") * currentMoveForce));
-        playerRigidbody.AddRelativeForce(Vector3.right * (Input.GetAxis("Horizontal") * currentMoveForce));
-
-
+        if (Velocity < moveSpeedCap)
+        {
+            playerRigidbody.AddRelativeForce(Vector3.forward * (Input.GetAxis("Vertical") * currentMoveForce));
+            playerRigidbody.AddRelativeForce(Vector3.right * (Input.GetAxis("Horizontal") * currentMoveForce));
+        }
     }
 
     void OnCollisionEnter(Collision collision)
