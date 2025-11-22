@@ -33,13 +33,6 @@ public class Player_Controller : MonoBehaviour
             playerRigidbody.AddRelativeForce(Vector3.forward * (Input.GetAxis("Vertical") * currentMoveForce));
             playerRigidbody.AddRelativeForce(Vector3.right * (Input.GetAxis("Horizontal") * currentMoveForce));
         }
-
-        if (Input.GetKeyDown("e"))
-        {
-            ThrowPresent();
-        }
-
-
     }
 
     void OnCollisionEnter(Collision collision)
@@ -56,16 +49,5 @@ public class Player_Controller : MonoBehaviour
     public float GetVelocity()
     { 
         return Velocity; 
-    }
-
-    void ThrowPresent()
-    {
-        Debug.Log("Present Thrown");
-        GameObject present = Instantiate(presentFrame, this.GetComponent<Camera>().transform.position, Quaternion.identity);
-        Rigidbody prb = present.GetComponent<Rigidbody>();
-
-        prb.AddForce(Vector3.forward * 500f, ForceMode.Force);
-
-
     }
 }
