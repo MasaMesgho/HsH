@@ -14,6 +14,6 @@ public class ROTATE : MonoBehaviour
     void Update()
     {
 
-        transform.Rotate(0f, 0.5f, 0f, Space.Self);
+        transform.Rotate(0f, 0f, 0.5f, Space.Self);
     }
 }
