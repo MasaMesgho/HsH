@@ -47,7 +47,7 @@ public class SimpleSmoothMouseLook : MonoBehaviour
 
         // Interpolate mouse movement over time to apply smoothing delta.
         _smoothMouse.x = Mathf.Lerp(_smoothMouse.x, mouseDelta.x, 1f / smoothing.x);
-        _smoothMouse.y = Mathf.Lerp(_smoothMouse.y, mouseDelta.y, 1f / smoothing.y);
+        _smoothMouse.y = Mathf.Lerp(_smoothMouse.y, mouseDelta.y, 0.5f / smoothing.y);
 
         // Find the absolute mouse movement value from point zero.
         _mouseAbsolute += _smoothMouse;
