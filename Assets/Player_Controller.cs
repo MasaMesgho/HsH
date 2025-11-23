@@ -25,7 +25,7 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Velocity = (float)(Math.Abs(playerRigidbody.linearVelocity.z) + Math.Abs(playerRigidbody.linearVelocity.y));
+        Velocity = (float)(Math.Abs(playerRigidbody.linearVelocity.z) + Math.Abs(playerRigidbody.linearVelocity.x));
         float currentMoveForce = moveForce;
         if (Velocity < 30) { currentMoveForce *= 2; }
 
@@ -45,6 +45,9 @@ public class Player_Controller : MonoBehaviour
     {
         moveForce = baseMoveForce;
         playerRigidbody.linearDamping = 0.5f;
+        string tag = collision.gameObject.tag;
+        if (tag == "Enemy" || tag == "Enemy Projectile") Destroy(this.gameObject);
+
     }
     void OnCollisionExit()
     {
