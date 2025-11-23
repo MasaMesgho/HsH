@@ -30,6 +30,8 @@ public class GrinchAI : MonoBehaviour
     private Rigidbody rb;
     private float initialHealthBarScaleX = 1f;
 
+    public GameObject playerCamera;
+
     void Start()
     {
         health = maxHealth;
@@ -137,6 +139,7 @@ public class GrinchAI : MonoBehaviour
     private void Die()
     {
         // simple death behavior; replace with your own (animation, pooling, etc.)
+        playerCamera.GetComponent<SimpleSmoothMouseLook>().cursorUnlock();
         Destroy(gameObject);
         SceneManager.LoadScene("Menu");
     }

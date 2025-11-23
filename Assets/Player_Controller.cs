@@ -32,7 +32,7 @@ public class Player_Controller : MonoBehaviour
 
         if (transform.position.y < 0)
         {
-            playerCamera.GetComponent<SimpleSmoothMouseLook>().lockCursor = false;
+            playerCamera.GetComponent<SimpleSmoothMouseLook>().cursorUnlock();
             Destroy(this.gameObject);
         }
 

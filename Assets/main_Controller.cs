@@ -18,7 +18,6 @@ public class main_Controller : MonoBehaviour
     void Start()
     {
         objAmount = GameObject.FindGameObjectsWithTag("Objective").Length;
-        playerCamera.GetComponent<SimpleSmoothMouseLook>().lockCursor = true;
     }
 
     // Update is called once per frame
