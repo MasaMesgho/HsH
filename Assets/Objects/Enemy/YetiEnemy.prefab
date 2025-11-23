@@ -179,7 +179,7 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 0}
   rotationSpeed: 1
-  movementSpeed: 15
+  movementSpeed: 40
 --- !u!1 &8545253667862938019 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7317999277533550180, guid: 7c7375a0ad7845b4db8f979e468341de, type: 3}

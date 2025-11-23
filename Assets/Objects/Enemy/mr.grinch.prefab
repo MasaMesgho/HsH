@@ -77,11 +77,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760ec601f075ff148acd08f28ca67408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 8778590874915329335, guid: 8d6e09ab114e95d4598ff3a99fdcac56, type: 3}
   spawnPoint: {fileID: 0}
   shotsPerVolley: 5
   timeBetweenShots: 0.15
+  delayBetweenVolleys: 4
   volleyStartDelay: 0.25
-  apexHeight: 6
-  deviationRadius: 1
+  apexHeight: 45
+  deviationRadius: 20
+  autoStart: 1
+  initialVolleyDelay: 2
   playerTag: Player
+  projectileLifeTime: 20

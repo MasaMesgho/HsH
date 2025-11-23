@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int MinZ = 0;
     [SerializeField] private int MaxX = 0;
     [SerializeField] private int MaxZ = 0;
-    private List<GameObject> PossibleEnemyList = new List<GameObject>();
+    [SerializeField] private List<GameObject> PossibleEnemyList = new List<GameObject>();
     private float timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,10 +33,10 @@ public class EnemySpawner : MonoBehaviour
         if (seconds > SpawnDelay & (EnemyList.Count < MaxEnemyCount))
         {
 
-            GameObject targetenemy = PossibleEnemyList[Random.Range(0, PossibleEnemyList.Count -1)];
-            Vector3 Spawn = new Vector3(Random.Range(MinX, MaxX), 100, Random.Range(MinZ, MaxZ));
+            GameObject targetenemy = PossibleEnemyList[Random.Range(0,2)];
+            Vector3 Spawn = new Vector3(Random.Range(MinX, MaxX), 77, Random.Range(MinZ, MaxZ));
             Quaternion Rotation = new Quaternion(-45, 0, 0, 0);
-            GameObject target = Instantiate (Enemy1, Spawn, Quaternion.identity  );
+            GameObject target = Instantiate (targetenemy, Spawn, Quaternion.identity  );
             target.transform.position = Spawn;
             EnemyList.Add(target);
             timer = 0;

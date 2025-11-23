@@ -52,7 +52,7 @@ public class MortarProjectile : MonoBehaviour
         // Prevent further physics interactions visually, then destroy shortly after
         if (rb != null)
         {
-            rb.linearVelocity = Vector3.zero;
+           // rb.linearVelocity = Vector3.zero;
             rb.isKinematic = true;
         }
 
@@ -61,7 +61,7 @@ public class MortarProjectile : MonoBehaviour
         foreach (var c in colliders)
             c.enabled = false;
 
-        Destroy(gameObject, destroyOnImpactDelay);
+       // Destroy(gameObject, destroyOnImpactDelay);
     }
 
     // If the projectile was not initialized by the spawner, make sure it still cleans up

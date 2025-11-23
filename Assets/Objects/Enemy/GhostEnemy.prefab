@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       propertyPath: m_Name
-      value: cute_ghost
+      value: GhostEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,3 +77,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdcc9ef1f58f6f41bc23c7a44652024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 7235266339266526508, guid: 2a66fb1a2f331d24ea982954fa5b4340, type: 3}
+  orbitSpeed: 90
+  orbitDistance: 10
+  orbitHeight: 77
+  lookAtPlayer: 1
+  initialAngle: 0
+  randomizeStartAngle: 1
+  angularAcceleration: 180
+  distanceSmoothTime: 10
+  heightSmoothTime: 10
+  positionSmoothTime: 10
