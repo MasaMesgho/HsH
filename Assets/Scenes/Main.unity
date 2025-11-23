@@ -457,8 +457,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1570370070}
     - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7030552163702104360, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1435,7 +1447,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133568872734629235, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: lockCursor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5681950611204090217, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: m_Name

@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6689036041284674117, guid: 7c7375a0ad7845b4db8f979e468341de, type: 3}
       propertyPath: m_Name
-      value: bigfoot_thug_2
+      value: YetiEnemy
       objectReference: {fileID: 0}
     - target: {fileID: -6689036041284674117, guid: 7c7375a0ad7845b4db8f979e468341de, type: 3}
       propertyPath: m_TagString
@@ -140,7 +140,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &2269580817341461951
 CapsuleCollider:
   m_ObjectHideFlags: 0

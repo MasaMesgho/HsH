@@ -47,10 +47,16 @@ public class GrinchAI : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        if (transform.position.y < 0)
+        {
+            this.gameObject.transform.position =  new Vector3 (500, 100, 500) ;
+        }
+
         if (!Boss) return;
         if (player == null) return;
 
-        movementSpeed = Mathf.Lerp(maxSpeed, baseSpeed, health / maxHealth);
+        movementSpeed = maxHealth - health;
         Vector3 toPlayer = player.transform.position - rb.position;
         if (toPlayer.sqrMagnitude < 0.0001f)
             return;
