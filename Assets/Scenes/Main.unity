@@ -1457,7 +1457,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133568872734629235, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: lockCursor
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1581862896552918441, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: playerCamera
