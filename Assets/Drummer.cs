@@ -24,7 +24,7 @@ public class Drummer : MonoBehaviour
 
         float velocity = pcontroller.Velocity;
 
-        if ( velocity > 50)
+        if ( velocity > 90)
         {
             VelCutoff = true;
         }

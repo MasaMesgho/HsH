@@ -139,7 +139,7 @@ MonoBehaviour:
   proj: {fileID: 2053686658390058488, guid: 5d19c9c19523115409cb3588b03886cf, type: 3}
   UseProjectileGravity: 1
   UseHitScan: 0
-  RangeProjectileSpeed: 100
+  RangeProjectileSpeed: 400
   HitscanRange: 100
   hitscanLayers:
     serializedVersion: 2
@@ -1443,11 +1443,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6629526547968929915, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: RangeProjectileSpeed
-      value: 50
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 6629526547968929915, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: hitscanLayers.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7463277943523256610, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
+      propertyPath: swellIntensity
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 7754051233382488432, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: m_LocalPosition.x
