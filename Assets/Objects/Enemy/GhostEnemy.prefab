@@ -59,6 +59,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1149213912170451822}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2182757953021048338}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
 --- !u!1 &5958335967530240346 stripped
 GameObject:
@@ -77,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdcc9ef1f58f6f41bc23c7a44652024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7235266339266526508, guid: 2a66fb1a2f331d24ea982954fa5b4340, type: 3}
+  player: {fileID: 0}
   orbitSpeed: 90
   orbitDistance: 10
   orbitHeight: 77
@@ -88,3 +91,25 @@ MonoBehaviour:
   distanceSmoothTime: 10
   heightSmoothTime: 10
   positionSmoothTime: 10
+--- !u!114 &2182757953021048338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958335967530240346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e63e2d9c32f515041a794d8a5e32687a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 7235266339266526508, guid: 2a66fb1a2f331d24ea982954fa5b4340, type: 3}
+  spawnPoint: {fileID: 0}
+  projectileSpeed: 40
+  projectileLifeTime: 12
+  projectileHoming: 1
+  fireKey: 323
+  autoFireEnabled: 1
+  delayAfterLastExpired: 2
+  initialSpawnEnabled: 1
+  initialSpawnDelay: 2

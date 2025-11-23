@@ -45,7 +45,7 @@ public class MortarProjectile : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Optionally ignore collisions with the mortar itself or certain layers here
-         if (collision.gameObject.CompareTag("Enemy")) return;
+         if (!collision.gameObject.CompareTag("Player")) return;
 
         // TODO: spawn impact VFX / sound here
 
