@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8352484374589162026}
   m_Layer: 0
   m_Name: GrinchShot
-  m_TagString: Untagged
+  m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

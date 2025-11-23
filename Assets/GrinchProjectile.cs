@@ -56,10 +56,7 @@ public class MortarProjectile : MonoBehaviour
             rb.isKinematic = true;
         }
 
-        // Disable colliders so it doesn't trigger multiple times
-        var colliders = GetComponents<Collider>();
-        foreach (var c in colliders)
-            c.enabled = false;
+
 
        // Destroy(gameObject, destroyOnImpactDelay);
     }

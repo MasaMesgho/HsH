@@ -11,11 +11,12 @@ public class main_Controller : MonoBehaviour
     public GameObject Player;
     public GameObject ScoreBoard;
     public GameObject SpeedBoard;
-    public GameObject OverText;
+    public GameObject Boss;
+    public int objAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        objAmount = GameObject.FindGameObjectsWithTag("Objective").Length;
     }
 
     // Update is called once per frame
@@ -27,11 +28,17 @@ public class main_Controller : MonoBehaviour
         }
 
         count++;
-        if (count >= 15)
+        if (count%15 == 0)
         {
             count = 0;
             speed = (int)Player.GetComponent<Player_Controller>().Velocity;
             displaySpeed();
+
+        }
+        if (count >= 30)
+        {
+            count = 0;
+            //if (objAmount == 0) Boss.GetComponent<GrinchAi>.SetBoss(true);
         }
     }
 
