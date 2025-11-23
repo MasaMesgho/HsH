@@ -3,7 +3,7 @@ using UnityEngine;
 public class child_controller : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    GameObject controller;
+    public GameObject controller;
     void Start()
     {
         if (controller == null) controller = GameObject.FindWithTag("Controller");
@@ -20,8 +20,8 @@ public class child_controller : MonoBehaviour
         Debug.Log("Ghost Collision Detected: "+collision.gameObject.tag);
         if (collision.gameObject.tag == "Present")
         {
-            Destroy(this.gameObject);
             controller.GetComponent<main_Controller>().objAmount -= 1;
+            Destroy(this.gameObject);
         }
     }
 

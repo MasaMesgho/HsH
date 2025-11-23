@@ -104,7 +104,7 @@ public class GrinchAI : MonoBehaviour
     // Handle physics collisions (non-trigger)
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("bullet"))
+        if (collision.gameObject.CompareTag("bullet") )
         {
             TakeDamage(2f);
         }

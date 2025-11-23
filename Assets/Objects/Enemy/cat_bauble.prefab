@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cat_bauble
       objectReference: {fileID: 0}
+    - target: {fileID: -6689036041284674117, guid: d16fb51f1eaa4364db0d95347c4ebf50, type: 3}
+      propertyPath: m_TagString
+      value: Enemy Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: d16fb51f1eaa4364db0d95347c4ebf50, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0

@@ -30,7 +30,6 @@ public class main_Controller : MonoBehaviour
         count++;
         if (count%15 == 0)
         {
-            count = 0;
             speed = (int)Player.GetComponent<Player_Controller>().Velocity;
             displaySpeed();
 
@@ -38,7 +37,7 @@ public class main_Controller : MonoBehaviour
         if (count >= 30)
         {
             count = 0;
-            //if (objAmount == 0) Boss.GetComponent<GrinchAi>.SetBoss(true);
+            if (objAmount == 0) Boss.GetComponent<GrinchAI>().SetBoss(true);
         }
     }
 

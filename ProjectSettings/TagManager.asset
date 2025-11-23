@@ -9,6 +9,7 @@ TagManager:
   - bullet
   - Present
   - Enemy Projectile
+  - Boss
   layers:
   - Default
   - TransparentFX

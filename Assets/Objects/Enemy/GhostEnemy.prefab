@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,6 +66,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2182757953021048338}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5632077536694129005}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: a2b152e38ba1d3c4b8e4823e5faaff7c, type: 3}
 --- !u!1 &5958335967530240346 stripped
 GameObject:
@@ -117,3 +120,24 @@ MonoBehaviour:
   delayAfterLastExpired: 2
   initialSpawnEnabled: 1
   initialSpawnDelay: 2
+--- !u!135 &5632077536694129005
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5958335967530240346}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 3}

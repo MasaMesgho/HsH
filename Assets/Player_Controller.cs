@@ -46,7 +46,7 @@ public class Player_Controller : MonoBehaviour
         moveForce = baseMoveForce;
         playerRigidbody.linearDamping = 0.5f;
         string tag = collision.gameObject.tag;
-        if (tag == "Enemy" || tag == "Enemy Projectile") Destroy(this.gameObject);
+        if (tag == "Enemy" || tag == "Enemy Projectile" || tag == "Boss") Destroy(this.gameObject);
 
     }
     void OnCollisionExit()
