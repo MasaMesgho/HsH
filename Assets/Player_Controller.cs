@@ -14,6 +14,7 @@ public class Player_Controller : MonoBehaviour
     public float Velocity;
     public float moveSpeedCap = 100f;
     public GameObject presentFrame;
+    public GameObject playerCamera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,8 +30,9 @@ public class Player_Controller : MonoBehaviour
         float currentMoveForce = moveForce;
         if (Velocity < 30) { currentMoveForce *= 2; }
 
-        if (transform.position.y < 0) 
+        if (transform.position.y < 0)
         {
+            playerCamera.GetComponent<SimpleSmoothMouseLook>().lockCursor = false;
             Destroy(this.gameObject);
         }
 
@@ -46,7 +48,11 @@ public class Player_Controller : MonoBehaviour
         moveForce = baseMoveForce;
         playerRigidbody.linearDamping = 0.5f;
         string tag = collision.gameObject.tag;
-        if (tag == "Enemy" || tag == "Enemy Projectile" || tag == "Boss") Destroy(this.gameObject);
+        if (tag == "Enemy" || tag == "Enemy Projectile" || tag == "Boss")
+        {
+            playerCamera.GetComponent<SimpleSmoothMouseLook>().cursorUnlock();
+            Destroy(this.gameObject);
+        }
 
     }
     void OnCollisionExit()

@@ -339,6 +339,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 714547536}
   m_SourcePrefab: {fileID: 100100000, guid: a4b282811977aaa42b5f033a37e39cc3, type: 3}
+--- !u!1 &460724538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 718326546424460243, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
+  m_PrefabInstance: {fileID: 3935692851994286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &651123229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5681950611204090217, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
@@ -458,11 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 1570370070}
     - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
       propertyPath: m_Drag
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
       propertyPath: m_Mass
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6271889987915535726, guid: f52905fbbb6382a48b608d8d58ff8613, type: 3}
       propertyPath: m_Constraints
@@ -1214,6 +1219,7 @@ MonoBehaviour:
   ScoreBoard: {fileID: 1951838762}
   SpeedBoard: {fileID: 1549380449}
   Boss: {fileID: 253018671}
+  playerCamera: {fileID: 460724538}
   objAmount: 0
 --- !u!4 &1851991407
 Transform:
@@ -1447,8 +1453,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 133568872734629235, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: lockCursor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1581862896552918441, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 460724538}
     - target: {fileID: 5681950611204090217, guid: a9a0c5301354d8940b74d3c334bf77d0, type: 3}
       propertyPath: m_Name
       value: Player

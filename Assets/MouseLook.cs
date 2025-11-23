@@ -74,4 +74,10 @@ public class SimpleSmoothMouseLook : MonoBehaviour
             transform.localRotation *= yRotation;
         }
     }
+
+    public void cursorUnlock()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
 }

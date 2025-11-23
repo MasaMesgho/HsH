@@ -12,11 +12,13 @@ public class main_Controller : MonoBehaviour
     public GameObject ScoreBoard;
     public GameObject SpeedBoard;
     public GameObject Boss;
+    public GameObject playerCamera;
     public int objAmount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         objAmount = GameObject.FindGameObjectsWithTag("Objective").Length;
+        playerCamera.GetComponent<SimpleSmoothMouseLook>().lockCursor = true;
     }
 
     // Update is called once per frame
